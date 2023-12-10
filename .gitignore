@@ -1,2 +1,4 @@
 .idea
 venv
+treemenu/__pycache__
+menu/__pycache__
