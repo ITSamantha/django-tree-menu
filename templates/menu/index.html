@@ -7,14 +7,23 @@
 
 
 {% block menu %}
-    Test Task - Menu
-    {% if menu %}
-        {% draw_menu 'main_menu' %}
-    {% else %}
-        <p>Меню не найдено.</p>
-    {% endif %}
+    <div>
+        <h1 class="page-title">TEST TASK - MENU</h1>
+        {% if menu %}
+            {% draw_menu 'main_menu' %}
+        {% else %}
+            <p>Меню не найдено.</p>
+        {% endif %}
+    </div>
+
 {% endblock %}
 
 {% block content %}
-    Test Task - Page Content
+    <div>
+        <h1 class="page-title">TEST TASK - PAGE CONTENT</h1>
+        {% if item %}
+            <p>Selected category: {{ item }}</p>
+        {% endif %}
+
+    </div>
 {% endblock %}

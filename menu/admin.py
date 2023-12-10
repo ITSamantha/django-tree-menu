@@ -1,6 +1,4 @@
 from django.contrib import admin
-
-from django.contrib import admin
 from menu.models import Menu, MenuItem
 from menu.inlines import MenuItemInline
 
