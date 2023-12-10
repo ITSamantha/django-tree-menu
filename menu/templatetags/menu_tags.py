@@ -16,10 +16,10 @@ def draw_menu(context, menu):
 
         root_item = [item for item in items_values.filter(parent=None)]
 
-        selected_item_id = int(context['item'])
-        selected_item = items.get(id=selected_item_id)
+        selected_item_url = context['item']
+        selected_item = items.get(url=selected_item_url)
 
-        selected_item_id_list = get_selected_item_id_list(selected_item, root_item, selected_item_id)
+        selected_item_id_list = get_selected_item_id_list(selected_item, root_item, selected_item.id)
 
         for item in root_item:
             if item['id'] in selected_item_id_list:

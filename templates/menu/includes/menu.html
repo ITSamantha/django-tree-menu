@@ -1,7 +1,7 @@
 <ul class="list-unstyled">
     {% for item in items %}
         <li class="mb-1">
-            <a href="{% url 'menu:menu' menu item.id %}"
+            <a href="{% url 'menu:menu' menu item.url %}"
                class=" text-decoration-none {% if item.child_items %}fw-bold{% endif %}">{{ item.title }}</a>
             {% with item.child_items as children %}
                 {% if children %}

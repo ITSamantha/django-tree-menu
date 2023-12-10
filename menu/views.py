@@ -9,5 +9,5 @@ class IndexPageView(TemplateView):
     def get_context_data(self, **kwargs) -> dict:
         context = super().get_context_data(**kwargs)
         context['menu'] = Menu.objects.get(slug=context['menu']) if 'menu' in context else Menu.objects.first()
-        context['item'] = context['item'] if 'item' in context else 0
+        context['item'] = context['item'] if 'item' in context else ""
         return context

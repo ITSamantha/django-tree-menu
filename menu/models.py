@@ -1,16 +1,12 @@
 from django.db import models
-
-from django.db import models
 from django.db.models import CheckConstraint, Q, F
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 
 
 class MenuItem(models.Model):
     title = models.CharField(max_length=256, unique=True, verbose_name='Название')
     parent = models.ForeignKey('self', null=True, blank=True,
                                related_name='children', on_delete=models.PROTECT, verbose_name='Родитель')
-    url = models.CharField(max_length=256, blank=True, null=True, unique=True, verbose_name='URL')
+    url = models.CharField(max_length=256, unique=True, verbose_name='URL')
 
     class Meta:
         verbose_name = 'Элемент меню'

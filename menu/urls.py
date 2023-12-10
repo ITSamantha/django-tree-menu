@@ -5,5 +5,5 @@ app_name = 'menu'
 
 urlpatterns = [
     path('', IndexPageView.as_view(), name='index'),
-    path('<slug:menu>/<int:item>', IndexPageView.as_view(), name='menu')
+    path('<slug:menu>/<path:item>', IndexPageView.as_view(), name='menu')  # May be int, slug
 ]
