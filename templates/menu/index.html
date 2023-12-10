@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load menu_tags %}
+
+{% block title %}
+    Test Task - Index Page
+{% endblock %}
+
+
+{% block menu %}
+    Test Task - Menu
+    {% if menu %}
+        {% draw_menu 'main_menu' %}
+    {% else %}
+        <p>Меню не найдено.</p>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    Test Task - Page Content
+{% endblock %}
